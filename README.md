@@ -64,19 +64,34 @@ Usage
 Once the server is running, you can use Postman or curl to make requests to the API.
 
 API Endpoints:-
+
 Vendor:
-POST /api/vendors/register: Register a new vendor
-POST /api/vendors/login: Log in as an existing vendor
+Register a new vendor:
+POST: http://localhost:5000/api/vendors/register 
 
-Products:
-POST /api/products: Add a new product
-GET /api/products: Get all products for the logged-in vendor
-PUT /api/products/:id: Update a product's details
-DELETE /api/products/:id: Delete a product
+Log in as an existing vendor:
+POST: http://localhost:5000/api/vendors/login
 
-Orders:
-GET /api/orders: List orders for the logged-in vendor
-PUT /api/orders/:id: Mark an order as shipped
+Products:-
+
+Add a new product:
+POST:http://localhost:5000/api/products 
+
+Get all products for the logged-in vendor:
+GET: http://localhost:5000/api/products
+
+Update a product's details:
+PUT: http://localhost:5000/api/products/:id 
+
+Delete a product:
+DELETE:http://localhost:5000/api/products/:id:
+
+Orders:-
+List orders for the logged-in vendor:
+GET:http://localhost:5000/api/orders 
+
+Mark an order as shipped
+PUT:http://localhost:5000/api/orders/:id  Mark an order as shipped
 
 
 Technologies Used
