@@ -67,10 +67,10 @@ API Endpoints:-
 
 Vendor:
 Register a new vendor:
-POST: http://localhost:5000/api/vendors/register 
+POST:http://localhost:5000/api/vendors/register 
 
 Log in as an existing vendor:
-POST: http://localhost:5000/api/vendors/login
+POST:http://localhost:5000/api/vendors/login
 
 Products:-
 
@@ -78,10 +78,10 @@ Add a new product:
 POST:http://localhost:5000/api/products 
 
 Get all products for the logged-in vendor:
-GET: http://localhost:5000/api/products
+GET:http://localhost:5000/api/products
 
 Update a product's details:
-PUT: http://localhost:5000/api/products/:id 
+PUT:http://localhost:5000/api/products/:id 
 
 Delete a product:
 DELETE:http://localhost:5000/api/products/:id:
@@ -91,7 +91,7 @@ List orders for the logged-in vendor:
 GET:http://localhost:5000/api/orders 
 
 Mark an order as shipped
-PUT:http://localhost:5000/api/orders/:id  Mark an order as shipped
+PUT:http://localhost:5000/api/orders/:id
 
 
 Technologies Used
