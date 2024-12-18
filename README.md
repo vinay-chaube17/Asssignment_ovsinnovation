@@ -15,7 +15,7 @@ Prerequisites
 Make sure you have the following installed on your machine:-
 Node.js (v14+ recommended)
 MongoDB Compass (for local database management) or MongoDB Atlas (for cloud database)
-npm or yarn for installing packages
+npm for installing packages
 
 
 
@@ -29,7 +29,7 @@ Go into the project folder:
 
 bash
 Copy code
-cd Asssignment_ovsinnovation
+cd Backend_Developer
 Install the required dependencies:
 
 bash
@@ -39,8 +39,9 @@ Set up your MongoDB:
 
 If you're using MongoDB Compass (locally), make sure MongoDB is running on your machine and connect to it with Compass.
 If you're using MongoDB Atlas (cloud database), create an Atlas account, set up a cluster, and get the connection string.
-Create a .env file in the root of the project and add these variables:
 
+
+Create a .env file in the root of the project and add these variables:
 bash
 Copy code
 MONGO_URI=your_mongo_connection_string
@@ -61,7 +62,7 @@ npm start
 Your API should now be running on http://localhost:5000.
 
 Usage
-Once the server is running, you can use Postman or curl to make requests to the API.
+Once the server is running, you can use Postman to make requests to the API.
 
 API Endpoints:-
 
