@@ -22,18 +22,15 @@ npm for installing packages
 Steps to Get Started
 First, clone the repository:
 
-bash
-Copy code
+
 git clone https://github.com/vinay-chaube17/Asssignment_ovsinnovation.git
 Go into the project folder:
 
-bash
-Copy code
+
 cd Backend_Developer
 Install the required dependencies:
 
-bash
-Copy code
+
 npm install
 Set up your MongoDB:
 
@@ -42,8 +39,6 @@ If you're using MongoDB Atlas (cloud database), create an Atlas account, set up 
 
 
 Create a .env file in the root of the project and add these variables:
-bash
-Copy code
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
@@ -53,9 +48,7 @@ Replace your_mongo_connection_string with the connection string from MongoDB Com
 Replace your_jwt_secret_key with a secret string for generating JWT tokens.
 
 
-Now, start the server:
-bash
-Copy code
+Now, start the server
 npm start
 
 
@@ -93,6 +86,71 @@ GET:http://localhost:5000/api/orders
 
 Mark an order as shipped
 PUT:http://localhost:5000/api/orders/:id
+
+
+Vendor:
+#Register a new vendor
+POST http://localhost:5000/api/vendors/register
+Example cURL command:
+POST http://localhost:5000/api/vendors/register \
+"Content-Type: application/json" \
+'{"name": "Vendor Name", "email": "vendor@example.com", "password": "password123"}'
+
+#Log in as an existing vendor
+POST http://localhost:5000/api/vendors/login
+Example cURL command:
+POST http://localhost:5000/api/vendors/login \
+"Content-Type: application/json" \
+'{"email": "vendor@example.com", "password": "password123"}'
+
+Products:
+
+#Add a new product
+POST http://localhost:5000/api/products
+Example cURL command:
+POST http://localhost:5000/api/products \
+"Authorization: Bearer YOUR_JWT_TOKEN" \
+"Content-Type: application/json" \
+'{"name": "Product 1", "price": 100, "stock": 50}'
+
+#Get all products for the logged-in vendor
+GET http://localhost:5000/api/products
+Example cURL command:
+GET http://localhost:5000/api/products \
+"Authorization: Bearer YOUR_JWT_TOKEN"
+
+     
+#Update a product's details
+PUT http://localhost:5000/api/products/:id
+Example cURL command:
+PUT http://localhost:5000/api/products/PRODUCT_ID \
+"Authorization: Bearer YOUR_JWT_TOKEN" \
+"Content-Type: application/json" \
+'{"name": "Updated Product", "price": 120, "stock": 40}'
+
+
+#Delete a product
+DELETE http://localhost:5000/api/products/:id
+Example cURL command:
+DELETE http://localhost:5000/api/products/PRODUCT_ID \
+"Authorization: Bearer YOUR_JWT_TOKEN"
+
+
+#Orders:
+List orders for the logged-in vendor
+GET http://localhost:5000/api/orders
+Example cURL command
+GET http://localhost:5000/api/orders \
+"Authorization: Bearer YOUR_JWT_TOKEN"
+
+
+#Mark an order as shipped
+PUT http://localhost:5000/api/orders/:id
+Example cURL command:
+PUT http://localhost:5000/api/orders/ORDER_ID \
+"Authorization: Bearer YOUR_JWT_TOKEN" \
+"Content-Type: application/json" \
+'{"status": "shipped"}'
 
 
 Technologies Used
